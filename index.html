@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        nav {
+            background-color: #34495e;
+            padding: 0.5rem;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+        }
+        
+        nav ul li {
+            margin: 0 1rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .product-info {
+            padding: 1rem;
+        }
+        
+        .product-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-price {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .add-to-cart {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1rem;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>المركز العلمي</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">الرئيسية</a></li>
+            <li><a href="#">المنتجات</a></li>
+            <li><a href="#">العروض</a></li>
+            <li><a href="#">اتصل بنا</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <div class="products-grid">
+            <!-- المنتج 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="الصور/ساعة.jpg" alt="">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">ساعة رجالي</h3>
+                    <p class="product-price">ج.م 200</p>
+                    <button class="add-to-cart">أضف إلى السلة</button>
+                </div>
+            </div>
+            
+            <!-- المنتج 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://via.placeholder.com/300" alt="لابتوب">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">لابتوب عالي الأداء</h3>
+                    <p class="product-description">لابتوب بمعالج قوي وذاكرة عالية</p>
+                    <p class="product-price">ج.م 200</p>
+                    <button class="add-to-cart">أضف إلى السلة</button>
+                </div>
+            </div>
+
+            <!-- المنتج 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://via.placeholder.com/300" alt="لابتوب">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">لابتوب عالي الأداء</h3>
+                    <p class="product-description">لابتوب بمعالج قوي وذاكرة عالية</p>
+                    <p class="product-price">ج.م 200</p>
+                    <button class="add-to-cart">أضف إلى السلة</button>
+                </div>
+            </div>
+
+            <!-- المنتج 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://via.placeholder.com/300" alt="لابتوب">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">لابتوب عالي الأداء</h3>
+                    <p class="product-description">لابتوب بمعالج قوي وذاكرة عالية</p>
+                    <p class="product-price">ج.م 200</p>                   
+                    <button class="add-to-cart">أضف إلى السلة</button>
+                </div>
+            </div>
+
+            <!-- المنتج 5 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://via.placeholder.com/300" alt="لابتوب">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">لابتوب عالي الأداء</h3>
+                    <p class="product-description">لابتوب بمعالج قوي وذاكرة عالية</p>
+                    <p class="product-price">ج.م 200</p>
+                    <button class="add-to-cart">أضف إلى السلة</button>
+                </div>
+            </div>
+
+            <!-- المنتج 6 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://via.placeholder.com/300" alt="لابتوب">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">لابتوب عالي الأداء</h3>
+                    <p class="product-description">لابتوب بمعالج قوي وذاكرة عالية</p>
+                    <p class="product-price">ج.م 200</p>
+                    <button class="add-to-cart">أضف إلى السلة</button>
+                </div>
+            </div>
+
+            <!-- المنتج 7 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://via.placeholder.com/300" alt="لابتوب">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">لابتوب عالي الأداء</h3>
+                    <p class="product-description">لابتوب بمعالج قوي وذاكرة عالية</p>
+                    <p class="product-price">ج.م 200</p>
+                    <button class="add-to-cart">أضف إلى السلة</button>
+                </div>
+            </div>
+
+            <!-- المنتج 8 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://via.placeholder.com/300" alt="لابتوب">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">لابتوب عالي الأداء</h3>
+                    <p class="product-description">لابتوب بمعالج قوي وذاكرة عالية</p>
+                    <p class="product-price">ج.م 200</p>
+                    <button class="add-to-cart">أضف إلى السلة</button>
+                </div>
+            </div>
+
+            <!-- المنتج 9 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://via.placeholder.com/300" alt="لابتوب">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">لابتوب عالي الأداء</h3>
+                    <p class="product-description">لابتوب بمعالج قوي وذاكرة عالية</p>
+                    <p class="product-price">ج.م 200</p>
+                    <button class="add-to-cart">أضف إلى السلة</button>
+                </div>
+            </div>
+
+            <!-- المنتج 10 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://via.placeholder.com/300" alt="لابتوب">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">لابتوب عالي الأداء</h3>
+                    <p class="product-description">لابتوب بمعالج قوي وذاكرة عالية</p> 
+                    <p class="product-price">ج.م 200</p>
+                    <button class="add-to-cart">أضف إلى السلة</button>
+                </div>
+            </div>
+
+            <!-- المنتج 11 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://via.placeholder.com/300" alt="لابتوب">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">لابتوب عالي الأداء</h3>
+                    <p class="product-description">لابتوب بمعالج قوي وذاكرة عالية</p>
+                    <p class="product-price">ج.م 200</p>
+                    <button class="add-to-cart">أضف إلى السلة</button>
+                </div>
+            </div>
+
+            <!-- المنتج 12 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://via.placeholder.com/300" alt="لابتوب">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">لابتوب عالي الأداء</h3>
+                    <p class="product-description">لابتوب بمعالج قوي وذاكرة عالية</p>
+                    <p class="product-price">ج.م 200</p>
+                    <button class="add-to-cart">أضف إلى السلة</button>
+                </div>
+            </div>
+            
+            <!-- المنتج 13 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://via.placeholder.com/300" alt="سماعات">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">سماعات لاسلكية</h3>
+                    <p class="product-description">سماعات بجودة صوت عالية وتصميم مريح</p>
+                    <p class="product-price">ج.م 200</p>
+                    <button class="add-to-cart">أضف إلى السلة</button>
+                </div>
+            </div>
+            
+            <!-- المنتج 14 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://via.placeholder.com/300" alt="ساعة ذكية">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">ساعة ذكية</h3>
+                    <p class="product-description">ساعة ذكية بتقنيات متطورة لتتبع اللياقة</p>
+                    <p class="product-price">ج.م 200</p>
+                    <button class="add-to-cart">أضف إلى السلة</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            <div class="container">
+            <h2>للتواصل</h2>
+            <h3> العنوان : الناصرية - العياط - الجيزة</h3>
+            <h3> هاتف: 01143636873</h3>
+            <h3> الصفحة : <a href="">facebook</a>
+            </h3>
+        </div>
+
+    
+    <footer>
+        <p> © متجر المنتجات المدرسية . جميع الحقوق محفوظة. 2025 . تم الصنع بواسطة &copy; <a href="https://www.facebook.com/MO3AMMEDYASSER?mibextid=ZbWKwL"> MO_YASER </a> &<a href="https://www.instagram.com/itz.mo_yaser?igsh=MW00eWFkZ2t2eW03eg=="> ITZ.MO_YASER </a>
+        </p>
+    </footer>
+    
+    <script>
+        // يمكن إضافة جافاسكريبت هنا للتفاعلية
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function() {
+                const productTitle = this.parentElement.querySelector('.product-title').textContent;
+                alert(`تم إضافة ${productTitle} إلى سلة التسوق`);
+            });
+        });
+    </script>
+
+</body>
+</html>
